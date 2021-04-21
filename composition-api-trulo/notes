@@ -71,3 +71,11 @@
         ]
     - nevyhodou je opakovanie referencie state v template (state.score alebo 
       state.dude)
+        - riesenie je toRefs
+            [
+                import {reactive, toRefs} from 'vue'
+                ...
+                return {
+                    ...toRefs(state)
+                }
+            ]

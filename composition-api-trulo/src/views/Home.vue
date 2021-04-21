@@ -1,12 +1,12 @@
 <template>
   <div>
-    <button @click="state.score++">{{ state.score }}</button>
+    <button @click="score++">{{ score }}</button>
   </div>
-  <p>{{ state.dude }}</p>
+  <p>{{ dude }}</p>
 </template>
 
 <script>
-import { reactive } from 'vue'
+import { reactive, toRefs } from 'vue'
 
 export default {
   setup() {
@@ -17,7 +17,9 @@ export default {
       dude: 'Bulma',
     })
 
-    return { state }
+    return {
+      ...toRefs(state),
+    }
   },
 }
 </script>
