@@ -79,3 +79,9 @@
                     ...toRefs(state)
                 }
             ]
+
+    - Vyhodou je pouzitie snippetov 
+        pre vytvorenie takehoto componentu staci zadat snippet
+            [
+                v3reactive-setup
+            ]
