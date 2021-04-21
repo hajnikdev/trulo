@@ -1,21 +1,22 @@
 <template>
-  <div></div>
+  <main class="flex min-h-screen bg-purple-500 lg:bg-gradient-to-r from-red-400 to-pink-400">
+    <div class="sm:flex items-start w-screen px-4 py-10 overflow-x-auto">
+      <List title="BOARD GAMES" />
+      <List title="TOKYO" />
+      <List title="BRAIN THOUGHTS" />
+    </div>
+  </main>
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue'
-
+import List from '@/components/List.vue'
 export default {
-  setup() {
-    const state = reactive({
-      count: 0,
-    })
+  components: {
+    List,
+  },
 
-    return {
-      ...toRefs(state),
-    }
+  setup() {
+    return {}
   },
 }
 </script>
-
-<style lang="scss" scoped></style>
