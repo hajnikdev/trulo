@@ -85,3 +85,9 @@
             [
                 v3reactive-setup
             ]
+
+4. Watcher, Life cycle hooks
+    - Mounted, onMounted
+        - potrebny import onMounted
+        - metoda onMounted(() => {})
+        - vykona sa ked je component pripraveny
