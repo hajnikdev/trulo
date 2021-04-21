@@ -14,3 +14,16 @@
                 "singleQuote": true,
                 "printWidth": 140
             }
+
+1. Composition Api
+    - pointa je Vytvorit z vue react
+    - klasicky sposob sa nazyva options api 
+        - vytvorene jasne kategorie pre jednotlive polozky (data(), methods, watch, computed, mounted) v export 
+          default daneho komponentu
+        - nevyhodou je rozmiestnenie kodu na roznych miestach 
+
+    - v Composition api je kod rozdeleny na feature takze vsetko co ma byt k danej funkcnosti je spolu.
+    - vyhodou Composition api je 
+        - mozes vytvarat reusable metody
+        - vyhodou je typescript support
+        - podobne ako react hooks
