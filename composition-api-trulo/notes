@@ -1,0 +1,16 @@
+0. Priprava
+    - instalacia extensions
+        * Vetur
+        * Vue VSCode Snippets
+
+        volitelne
+        * Prettier - odporucam 
+    
+    - Vytvorit konfiguracny subor pre Prettier
+        subor s nazvom .prettierrc
+        obsah suboru: (zakladne parametre)
+            {
+                "semi": false,
+                "singleQuote": true,
+                "printWidth": 140
+            }
