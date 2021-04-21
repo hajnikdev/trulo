@@ -1,0 +1,24 @@
+1. volne poznamky
+	Composition API - novy sposob 
+	Options API
+
+2. Instalacia VUE 
+	stranka https://cli.vuejs.org/guide/installation.html
+	instalacia [npm install -g @vue/cli]
+	
+3. Vytvorenie applikacie
+	prikaz [vue create {nazov}]
+
+	CLI ponuka features
+		zakladne vybavenie projektu, zvolit 
+			* Choose Vue version
+				s parametrami
+					- Babel
+					- Router
+					- Linter / Formater
+			* Version of Vue.js - 3.x
+			* History mode for router - Yes
+			* Linter - ESLint + Prettier
+			* Lint Features - Lint on save
+			* Config for Babel, ESLint, etc. - In dedicated config files
+			* Save this as a preset for future project - No
