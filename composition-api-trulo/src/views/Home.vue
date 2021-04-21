@@ -1,26 +1,23 @@
 <template>
   <div>
-    <button @click="score++">{{ score }} score double = {{ double }}</button>
+    <button @click="state.score++">{{ state.score }}</button>
   </div>
-  <p>{{ hello }}</p>
+  <p>{{ state.dude }}</p>
 </template>
 
 <script>
-import { ref, computed } from 'vue'
+import { reactive } from 'vue'
 
 export default {
   setup() {
-    /**  vyhoda zgrupovania casti kodu teda vlastna organizacia kodu*/
+    /** Tvorba state za pomoci reactive */
 
-    // data
-    const score = ref(0)
-    const dude = ref('Bulma')
+    const state = reactive({
+      score: 69,
+      dude: 'Bulma',
+    })
 
-    // computed (v3computed)
-    const double = computed(() => score.value * 2)
-    const hello = computed(() => 'Hello, I am ' + dude.value)
-
-    return { score, double, hello }
+    return { state }
   },
 }
 </script>

@@ -48,3 +48,26 @@
     - v3computed nam vrati snippet pre computed v Composition
       api
     
+3. reactive, tvorba state
+    - potrebny import reactive from 'vue'
+    - jednoduche vytvorenie state: 
+        [
+            <script>
+                import { reactive } from 'vue'
+
+                export default {
+                    setup() {
+                        /** Tvorba state za pomoci reactive */
+
+                        const state = reactive({
+                            score: 69,
+                            dude: 'Bulma',
+                        })
+
+                        return { state }
+                    },
+                }
+            </script>
+        ]
+    - nevyhodou je opakovanie referencie state v template (state.score alebo 
+      state.dude)
