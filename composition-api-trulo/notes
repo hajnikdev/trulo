@@ -91,3 +91,6 @@
         - potrebny import onMounted
         - metoda onMounted(() => {})
         - vykona sa ked je component pripraveny
+
+5. nfn snippet
+    - vytvori novu prazdnu arrow function 

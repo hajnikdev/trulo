@@ -7,15 +7,20 @@
     <ul>
       <Card v-for="card in cards" :text="card.text" :key="card.id"></Card>
     </ul>
+
+    <CardCreateForm></CardCreateForm>
   </section>
 </template>
 
 <script>
 import { reactive, toRefs } from 'vue'
 import Card from '@/components/Card.vue'
+import CardCreateForm from './CardCreateForm'
+
 export default {
   components: {
     Card,
+    CardCreateForm,
   },
   props: {
     title: {
