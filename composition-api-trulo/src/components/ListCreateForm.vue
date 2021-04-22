@@ -19,7 +19,8 @@ export default {
   setup(props, { emit }) {
     const title = ref('')
     const submitForm = () => {
-      emit()
+      emit('new-list-coming', title.value)
+      title.value = ''
     }
 
     return {
