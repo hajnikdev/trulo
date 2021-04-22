@@ -35,7 +35,13 @@
 import { reactive, toRefs } from 'vue'
 
 export default {
-  setup() {
+  props: {
+    listId: {
+      type: Number,
+    },
+  },
+
+  setup(props) {
     const state = reactive({
       text: '',
       formVisible: false,
@@ -46,7 +52,14 @@ export default {
     }
 
     const submitForm = () => {
-      window.eventBus.emit('new-card-coming', state.text)
+      console.log(props.listId)
+      console.log(state.text)
+      window.eventBus.emit('new-card-coming', {
+        listId: props.listId,
+        text: state.text,
+      })
+      state.text = ''
+      toggleForm()
     }
 
     return {
