@@ -8,7 +8,7 @@
       <Card v-for="card in cards" :text="card.text" :key="card.id"></Card>
     </ul>
 
-    <CardCreateForm></CardCreateForm>
+    <CardCreateForm />
   </section>
 </template>
 

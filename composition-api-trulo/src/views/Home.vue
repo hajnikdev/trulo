@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { data } from '../data.js'
 import List from '../components/List.vue'
 import ListCreateForm from '../components/ListCreateForm.vue'
@@ -42,6 +42,10 @@ export default {
       console.dir(lists.value)
     }
 
+    //events
+    onMounted(() => {
+      window.eventBus.on('new-card-coming', (event) => alert(event))
+    })
     return {
       lists,
       addNewList, // nevyhnutne sem pridat metodu do ako vystup
