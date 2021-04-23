@@ -11,7 +11,7 @@
         :key="list.id"
       />
 
-      <ListCreateForm @new-list-coming="addNewList($event)" />
+      <ListCreateForm @new-list-coming="addNewList($event, lists)" />
     </div>
   </main>
 </template>
@@ -21,6 +21,11 @@ import { ref, onMounted } from 'vue'
 import { data } from '../data.js'
 import List from '../components/List.vue'
 import ListCreateForm from '../components/ListCreateForm.vue'
+
+// functions
+import { addNewCard } from '../cards'
+import { addNewList } from '../lists'
+
 export default {
   components: {
     List,
@@ -29,31 +34,11 @@ export default {
   setup() {
     const lists = ref(data)
 
-    const addNewList = (title) => {
-      if (!title) {
-        return
-      }
-
-      lists.value.push({
-        id: Math.max(...lists.value.map((list) => list.id)) + 1,
-        title: title,
-        cards: [],
-      })
-
-      console.dir(lists.value)
-    }
-
     //events
     onMounted(() => {
-      window.eventBus.on('new-card-coming', (event) => {
-        let listForNewCard = lists.value.find(
-          (list) => list.id === event.listId
-        )
-        listForNewCard.cards.push({
-          id: Math.max(...listForNewCard.cards.map((card) => card.id)) + 1,
-          text: event.text,
-        })
-      })
+      window.eventBus.on('new-card-coming', (event) =>
+        addNewCard(event, lists.value)
+      )
     })
     return {
       lists,

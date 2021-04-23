@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue'
 import Card from '@/components/Card.vue'
 import CardCreateForm from './CardCreateForm'
 
@@ -33,14 +32,6 @@ export default {
       type: Array,
     },
   },
-  setup(props) {
-    console.log(props.title)
-    const state = reactive({
-      count: 0,
-    })
-    return {
-      ...toRefs(state),
-    }
-  },
+  setup() {},
 }
 </script>

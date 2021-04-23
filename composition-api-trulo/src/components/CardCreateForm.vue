@@ -52,8 +52,6 @@ export default {
     }
 
     const submitForm = () => {
-      console.log(props.listId)
-      console.log(state.text)
       window.eventBus.emit('new-card-coming', {
         listId: props.listId,
         text: state.text,
